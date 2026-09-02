@@ -11,4 +11,4 @@ Run through these checks in order; print pass/fail per line. Stop at the first f
 5. `curl -sf https://api-docs.edgepress.cc/openapi.json > /dev/null` (docs site reachable)
 6. `command -v jq` (nice-to-have; skill still works without it, output just less pretty)
 
-End with a one-line summary + plugin version from `.claude-plugin/plugin.json`.
+End with a one-line summary + plugin version from `.codex-plugin/plugin.json`.

@@ -22,7 +22,7 @@ parent asked for.
 
 - `EDGEPRESS_TENANT` (hostname) and `EDGEPRESS_TOKEN` (`epat_...` PAT) are
   already exported and were verified by the parent before you were dispatched.
-- The `ep` script is on PATH (it lives at `skills/edgepress/scripts/ep` inside
+- The `ep` script is on PATH (it lives at `scripts/ep` inside
   the plugin). Every API call goes through `ep` — never raw `curl`, never
   WebFetch.
 - `ep` usage: `ep METHOD /path ['json-body']`. Non-2xx prints `HTTP <status>`

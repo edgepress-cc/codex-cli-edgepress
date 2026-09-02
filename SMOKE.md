@@ -12,7 +12,6 @@ Post-install manual verification. Run through this once after
 ## 1. Install
 
 ```
-/plugin marketplace add likudn-ik/claude-code-edgepress
 codex plugin install github://edgepress-cc/codex-cli-edgepress
 ```
 
@@ -54,13 +53,13 @@ Expected: six pass lines + plugin version.
 
 > "list my 3 most recent drafts"
 
-Expected: Claude loads the `edgepress` skill, reads `references/posts.md`, runs `ep GET /posts?status=draft&limit=3`, and summarises the 3 posts by slug + title.
+Expected: Codex loads the `edgepress` skill, reads `references/posts.md`, runs `ep GET /posts?status=draft&limit=3`, and summarises the 3 posts by slug + title.
 
 ## 5. Natural-language write
 
 > "create a draft titled 'Smoke test — safe to delete' with content 'This is a smoke test.'"
 
-Expected: Claude runs `ep POST /posts …` and reports the new post's id + URL. You can verify at `https://<your-tenant>/admin/posts` and delete it.
+Expected: Codex runs `ep POST /posts …` and reports the new post's id + URL. You can verify at `https://<your-tenant>/admin/posts` and delete it.
 
 ## 6. Subagent dispatch
 
@@ -77,7 +76,7 @@ Expected: `edgepress-workflow` subagent spawns, runs paginated GETs, returns one
 
 ## If anything fails
 
-File an issue at https://github.com/likudn-ik/claude-code-edgepress/issues with:
+File an issue at https://github.com/edgepress-cc/codex-cli-edgepress/issues with:
 
 - Which step failed.
 - Exact command + output (redact your token).
